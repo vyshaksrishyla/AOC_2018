@@ -20,7 +20,10 @@ Enter a number from 1 to 25 to see the solution to the problem from Advent Of Co
             switch (problemNumber)
             {
                 case 1:
-                    Console.WriteLine(ChallengeOne.GetSolution());
+                    Console.WriteLine($"Part 1 : {ChallengeOne.PartOne()}; Part 2 : {ChallengeOne.PartTwo()}");
+                    break;
+                case 2:
+                    Console.WriteLine(ChallengeTwo.Part1());
                     break;
                 default:
                     Console.WriteLine(_solutionDoesNotExistMessage);

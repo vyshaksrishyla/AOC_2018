@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace AOC_2018
 {
@@ -6,19 +7,44 @@ namespace AOC_2018
     {
         private static readonly string[] Input = File.ReadAllLines(@"resource\ChallengeOne.txt");
 
-        private static int _result = 0;
+        private static int _resultPart1 = 0;
 
-        public static int GetSolution()
+        private static int _resultPart2 = 0;
+
+        public static int PartOne()
         {
             foreach (string readLine in Input)
             {
                 if (int.TryParse(readLine, out int convertedValue))
                 {
-                    _result += convertedValue;
+                    _resultPart1 += convertedValue;
                 }
-                
             }
-            return _result;
+
+            return _resultPart1;
+        }
+
+        public static int PartTwo()
+        {
+            HashSet<int> hashSetOfFrequencies = new HashSet<int>();
+
+            hashSetOfFrequencies.Add(_resultPart2);
+
+            while (true)
+            {
+                foreach (string readLine in Input)
+                {
+                    if (int.TryParse(readLine, out int convertedValue))
+                    {
+                        _resultPart2 += convertedValue;
+                    }
+
+                    if (hashSetOfFrequencies.Contains(_resultPart2))
+                        return _resultPart2;
+
+                    hashSetOfFrequencies.Add(_resultPart2);
+                }
+            }
         }
     }
 }
