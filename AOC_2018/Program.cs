@@ -23,7 +23,7 @@ Enter a number from 1 to 25 to see the solution to the problem from Advent Of Co
                     Console.WriteLine($"Part 1 : {ChallengeOne.PartOne()}; Part 2 : {ChallengeOne.PartTwo()}");
                     break;
                 case 2:
-                    Console.WriteLine(ChallengeTwo.Part1());
+                    Console.WriteLine($"Part 1 : {ChallengeTwo.PartOne()}; Part 2 : {ChallengeTwo.PartTwo()}");
                     break;
                 default:
                     Console.WriteLine(_solutionDoesNotExistMessage);
