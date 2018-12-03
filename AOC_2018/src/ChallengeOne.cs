@@ -7,12 +7,10 @@ namespace AOC_2018
     {
         private static readonly string[] Input = File.ReadAllLines(@"resource\ChallengeOne.txt");
 
-        private static int _resultPart1 = 0;
-
-        private static int _resultPart2 = 0;
-
         public static int PartOne()
         {
+            var _resultPart1 = 0;
+
             foreach (string readLine in Input)
             {
                 if (int.TryParse(readLine, out int convertedValue))
@@ -27,6 +25,8 @@ namespace AOC_2018
         public static int PartTwo()
         {
             HashSet<int> hashSetOfFrequencies = new HashSet<int>();
+
+            var _resultPart2 = 0;
 
             hashSetOfFrequencies.Add(_resultPart2);
 
